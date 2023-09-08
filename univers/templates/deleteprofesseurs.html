@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-5" class="col-6 offset-3">
+	Supprimer un professeur.html |
+	<p>Veux-tu supprimer le professeur : <strong>{{professeur}}</strong>?</p>
+	<a href="{% url 'home' %}"> Annuler</a>
+		<form method="post">
+			{% csrf_token %}
+			<input type="submit" value="Confirmer">
+		</form>
+</div>
+{% endblock content %}

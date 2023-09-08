@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-5">
+
+   <!-- Formulaire d'ajout d'un administratif -->
+   <form method="post">
+    {% csrf_token %}
+
+{#        {{professeur_form.as_p}}#}
+{#       <form>#}
+{#          <div class="form-row">#}
+{#            <div class="col">#}
+{#              <input type="text" class="form-control" placeholder="First name">#}
+{#            </div>#}
+{#            <div class="col">#}
+{#              <input type="text" class="form-control" placeholder="Last name">#}
+{#            </div>#}
+{#          </div>#}
+{#</form>#}
+        {{professeur_form.nom}}
+        {{professeur_form.prenom}}
+        {{professeur_form.email}}
+        {{professeur_form.tel}}
+        {{professeur_form.annEntre}}
+        {{professeur_form.ID_Annee}}
+        {{professeur_form.ID_Classe}}
+        {{professeur_form.ID_Modul}}
+        <button type="submit">Ajouter</button>
+    </form>
+</div>
+{% endblock content %}
